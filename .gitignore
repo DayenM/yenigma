@@ -1,0 +1,25 @@
+# Private working notes (never published)
+HANDOFF.md
+SPEC.md
+PROGRESS.md
+docs/superpowers/
+prototype/
+.claude/
+.codegraph/
+
+# Build output
+node_modules/
+dist/
+target/
+src-tauri/target/
+src-tauri/gen/
+
+# Local and secret files
+.env
+.env.*
+*.log
+*.local
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
