@@ -9,8 +9,8 @@
 <br>
 
 <img src="https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0b0b0c?style=flat-square&labelColor=0b0b0c&color=1a1820" alt="Platform: Windows 10 / 11">
-<img src="https://img.shields.io/badge/core-Rust-0b0b0c?style=flat-square&labelColor=0b0b0c&color=a8874f" alt="Core: Rust">
-<img src="https://img.shields.io/badge/shell-Tauri%202-0b0b0c?style=flat-square&labelColor=0b0b0c&color=a8874f" alt="Shell: Tauri 2">
+<img src="https://img.shields.io/badge/core-Rust-0b0b0c?style=flat-square&labelColor=0b0b0c&color=7a1322" alt="Core: Rust">
+<img src="https://img.shields.io/badge/shell-Tauri%202-0b0b0c?style=flat-square&labelColor=0b0b0c&color=7a1322" alt="Shell: Tauri 2">
 <img src="https://img.shields.io/badge/status-in%20design-0b0b0c?style=flat-square&labelColor=0b0b0c&color=1a1820" alt="Status: in design">
 <img src="https://img.shields.io/badge/license-all%20rights%20reserved-0b0b0c?style=flat-square&labelColor=0b0b0c&color=1a1820" alt="License: all rights reserved">
 
