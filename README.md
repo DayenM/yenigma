@@ -4,19 +4,19 @@
 
 <br>
 
-**A Dynamic Island for Windows with a pair of eyes, a sense of priority, and a direct line to your AI agents.**
+**A Dynamic Island for Windows with a pair of eyes, synced lyrics on a full-screen stage, and an AI that answers from wherever you point it.**
 
 <br>
 
 <img src="https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0b0b0c?style=flat-square&labelColor=0b0b0c&color=1a1820" alt="Platform: Windows 10 / 11">
 <img src="https://img.shields.io/badge/core-Rust-0b0b0c?style=flat-square&labelColor=0b0b0c&color=7a1322" alt="Core: Rust">
 <img src="https://img.shields.io/badge/shell-Tauri%202-0b0b0c?style=flat-square&labelColor=0b0b0c&color=7a1322" alt="Shell: Tauri 2">
-<img src="https://img.shields.io/badge/status-in%20design-0b0b0c?style=flat-square&labelColor=0b0b0c&color=1a1820" alt="Status: in design">
+<img src="https://img.shields.io/badge/updates-signed%20%26%20automatic-0b0b0c?style=flat-square&labelColor=0b0b0c&color=1a1820" alt="Updates: signed and automatic">
 <img src="https://img.shields.io/badge/license-all%20rights%20reserved-0b0b0c?style=flat-square&labelColor=0b0b0c&color=1a1820" alt="License: all rights reserved">
 
 <br><br>
 
-[Overview](#overview) &nbsp;&nbsp; [Features](#features) &nbsp;&nbsp; [How it works](#how-it-works) &nbsp;&nbsp; [Principles](#principles) &nbsp;&nbsp; [Roadmap](#roadmap) &nbsp;&nbsp; [License](#license)
+[Download](#download) &nbsp;&nbsp; [Features](#features) &nbsp;&nbsp; [Lyrics Stage](#the-lyrics-stage) &nbsp;&nbsp; [Shortcuts](#shortcuts) &nbsp;&nbsp; [Privacy](#privacy) &nbsp;&nbsp; [License](#license)
 
 </div>
 
@@ -24,20 +24,20 @@
 
 ## Overview
 
-**yenigma** lives in a small black notch at the top of your screen. Most of the time it just watches: its eyes follow your cursor, blink, and fall asleep when you step away. When something matters, the notch opens with a spring and shows **one thing**: the most important one right now.
+**yenigma** lives in a small black notch at the top of your screen. Most of the time it just watches: its eyes follow your cursor, blink, and fall asleep when you step away. When something matters, the notch opens with a spring and shows **one thing**: the song that just started, the end of a focus session, a notification, or the answer to a question you asked.
 
-That one thing is often your AI agents. When Claude Code in any project asks a question or needs permission, yenigma tells you which project and what it wants. One click takes you there.
+Click it and it opens into a menu: chat, focus, clipboard, notifications. Play music and it becomes a little player with synced lyrics beside it, or a full-screen stage for the lyrics alone.
 
-```text
-$ yenigma status
-agent   ●  daymark        asking: read SQLite directly, or go through a local command?
-focus   ◐  24:12          pomodoro 1 of 4
-media   ♪  now playing    synced lyrics on
-quota   ▰▰▰▰▰▰▰▰▱▱  82%   5-hour window resets in 1h 14m
-```
+<br>
+
+## Download
+
+1. Get the latest `yenigma_x.y.z_x64-setup.exe` from **[Releases](https://github.com/DayenM/yenigma/releases)**.
+2. Run it. It installs for your user only, with no admin rights needed.
+3. That's it. yenigma updates itself: when a new version is out, the island tells you, shows what's new, and installs it with one click. Every update is signed and verified before it installs.
 
 > [!NOTE]
-> yenigma is in the design phase. There is no release or installer yet.
+> The installer is not code-signed yet, so Windows SmartScreen may say "Windows protected your PC". Choose **More info → Run anyway**. Windows 10 needs the WebView2 runtime, which the installer fetches if it is missing.
 
 <br>
 
@@ -48,128 +48,115 @@ quota   ▰▰▰▰▰▰▰▰▱▱  82%   5-hour window resets in 1h 14m
 <td width="50%" valign="top">
 
 **The eyes**<br>
-A pair of eyes inside the notch. They track your cursor, blink at random, squint when you focus, and sleep when you go idle. They wake up when an agent needs you.
+A pair of eyes inside the notch. They track your cursor, blink, glance around and sleep when you go idle. Pick the island's look: capsule, twins, ripple, bolt, LED, drip or ghost.
 
 </td>
 <td width="50%" valign="top">
 
-**Priority Now**<br>
-The island shows one thing at a time. In order: an agent waiting on you, a finished timer, a running timer, music, then the idle clock.
+**Music and synced lyrics**<br>
+Whatever is playing through Windows media controls (Spotify, YouTube in the browser, and more): cover, controls, and synced lyrics in a box beside the player. Pull the lyrics out into their own window and pin it anywhere.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-**Agent radar**<br>
-Global hooks catch Claude Code questions, permission prompts, and finished runs in every project. Orca workers are watched too. Questions queue when several projects ask at once.
+**Lyrics Stage**<br>
+One click and your screen melts into a soft blur with nothing but the lyrics, turning on a 3D drum. [More below.](#the-lyrics-stage)
 
 </td>
 <td valign="top">
 
-**Quota awareness**<br>
-Shows how much of Claude's 5-hour and weekly usage you have used, counts down to the reset, and warns you before you hit the limit. It reads data Claude Code already reports, so checking costs nothing extra.
+**Ask**<br>
+Press the hotkey and type. Answers come from any OpenAI-compatible endpoint you choose. Add your screen or paste an image, keep a history, hold a key to speak (transcribed on your own PC), and it can even draw in Paint.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-**Ask on a hotkey**<br>
-Press the hotkey and start typing. Your screen is read only when you send. Answers come from `claude -p` on your own subscription or from a custom endpoint.
+**Notifications**<br>
+Windows notifications arrive in the island instead of the corner, with the app's own banners kept quiet. Click one and the app comes straight to the front.
 
 </td>
-<td valign="top">
-
-**Media**<br>
-Controls whatever is playing through Windows media controls, with cover art, play and pause, and synced lyrics.
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 **Focus**<br>
-A pomodoro timer and gentle water reminders. It reads today's tasks from Daymark without changing them, and hides itself when an app goes fullscreen.
+A pomodoro timer you can set to any length, gentle water reminders, and the island steps aside when an app goes full screen.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Clipboard**<br>
+The last things you copied, as a strip of cards. One click puts one back. Copies from password managers are never kept.
 
 </td>
 <td valign="top">
 
-**Shelf**<br>
-Drop files on the island to park them, then drag them out where you need them. Clipboard history lives here too.
+**A little personality**<br>
+Now and then a greeting, a quote, or a line that fits what you're doing. Every open, close and click has a small synthesized sound, with its own volume.
 
 </td>
 </tr>
 </table>
 
-Every open, close, and click has a small synthesized sound. You can set the volume or mute it.
+<br>
+
+## The Lyrics Stage
+
+A focus mode for the song you love right now.
+
+- **Your screen, softly blurred.** No wallpaper, no album art: only the lyrics over the screen you were on, faded in smoothly.
+- **A 3D drum.** The sung line faces you; past lines roll up and away, the next ones rise from below. Scroll or drag to browse the lyrics and click a line to jump the song there.
+- **The chorus lands.** The hook and the title line turn bold while the room dims for a moment. A held note slowly swells and trembles until it ends.
+- **Shake Lyrics.** The lyrics shake to the beat of whatever is playing, harder for loud and fast songs, with a ghost trail like a camera shake. Set the power from 0 to 100, or hold **Space** to shake it hard yourself.
+- **Themes.** Clear blur, dark cinema, yenigma colours, aurora, or any colour you pick, from a cord hanging next to the Close button.
 
 <br>
 
-## How it works
-
-```mermaid
-flowchart LR
-    subgraph Windows
-        SMTC[Media controls]
-        FS[Fullscreen signal]
-        HK[Global hotkey]
-        IN[Cursor and idle input]
-    end
-    subgraph Agents
-        CC[Claude Code hooks]
-        SL[Statusline usage data]
-        OR[Orca workers]
-    end
-    subgraph yenigma
-        CORE[Rust core<br/>event-driven, no polling]
-        UI[Island UI<br/>WebView2, springs, Rive eyes]
-    end
-    SMTC --> CORE
-    FS --> CORE
-    HK --> CORE
-    IN --> CORE
-    CC --> CORE
-    SL --> CORE
-    OR --> CORE
-    CORE -- one priority at a time --> UI
-```
-
-- **Rust core.** The core talks to Windows (media sessions, fullscreen notifications, hotkeys, input) and to your agents. It turns everything into a small stream of events.
-- **Island UI.** The island is a single resident WebView2 surface. Shapes move on springs, and the eyes are a Rive state machine.
-- **Window sizing.** The window always matches the island's current bounds. It grows before an opening animation and shrinks after a closing one, so it never blocks clicks and never resizes mid-motion.
-
-<br>
-
-## Principles
+## Shortcuts
 
 | | |
 |---|---|
-| **Quiet by default** | Near-zero CPU when idle. Rendering stops when the springs settle, and pauses when the island is hidden or in fullscreen, or when the eyes are asleep. |
-| **One thing at a time** | The island shows one priority and never a dashboard. |
-| **Private by design** | The screen is read only when you send a question. Agent data stays on your machine. |
-| **Motion with intent** | Springs answer your actions. Idle motion is sparse, so a notch you see hundreds of times a day never gets tiring. |
+| `Ctrl` `Alt` `Space` | Ask |
+| `Ctrl` `Alt` `M` (hold) | Speak a question |
+| `Ctrl` `Alt` `F` | Focus timer |
+| `Ctrl` `Alt` `V` | Clipboard |
+| `Ctrl` `Alt` `H` | Tuck the island away, or bring it back |
+| On the stage | `Esc` close · `Space` tap to play/pause, hold to shake · `←` `→` change song · `↑` `↓` or scroll to browse |
 
 <br>
 
-## Roadmap
+## Privacy
 
-- [ ] Notch shell: docking, multi-monitor, mixed DPI, hide on fullscreen
-- [ ] Eyes: cursor tracking, blink, sleep, wake
-- [ ] Agent radar: Claude Code hooks, Orca workers, question queue
-- [ ] Quota from statusline data, with warnings
-- [ ] Hotkey ask with `claude -p` and a custom endpoint
-- [ ] Media controls and synced lyrics
-- [ ] Focus timer, water reminders, Daymark tasks
-- [ ] File shelf and clipboard history
-- [ ] Sound design pass
+| | |
+|---|---|
+| **Your screen** | Read only when you send a question with it, never in the background. |
+| **Your AI key** | Kept in Windows Credential Manager, never in a settings file. It only travels over `https://`, or to your own computer. |
+| **Your voice** | Transcribed on your PC with Whisper. The audio never leaves it. |
+| **Lyrics** | Fetched from [LRCLIB](https://lrclib.net) by song title and artist, and cached on your PC. |
+| **No telemetry** | yenigma sends nothing about you anywhere. The only regular request is the update check. |
+
+<br>
+
+## Built with
+
+A Rust core talks to Windows (media sessions, notifications, full-screen signals, hotkeys, input) and drives one resident WebView2 surface through Tauri 2. Shapes move on springs; rendering stops when they settle, so the island costs next to nothing while it waits.
+
+<br>
+
+## Support
+
+If yenigma makes your screen a little nicer, a ⭐ on this repository helps other people find it.
 
 <br>
 
 ## License
 
 Copyright © 2026 DayenM. All rights reserved.
-The source is visible here, but it is not open source. See [LICENSE](LICENSE).
+yenigma is free to download and use, but it is not open source. See [LICENSE](LICENSE).
 
 <br>
 
