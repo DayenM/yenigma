@@ -28,6 +28,12 @@
 
 Click it and it opens into a menu: chat, focus, clipboard, notifications. Play music and it becomes a little player with synced lyrics beside it, or a full-screen stage for the lyrics alone.
 
+<div align="center">
+<img src=".github/assets/demo.gif" alt="yenigma in action: music with synced lyrics, the Lyrics Stage, Ask, the focus timer, the clipboard, a notification and the three themes" width="100%">
+<br>
+<sub>Watch it in full quality: <a href=".github/assets/demo.mp4">demo.mp4</a> · and every island style: <a href=".github/assets/styles.mp4">styles.mp4</a></sub>
+</div>
+
 <br>
 
 ## Download
@@ -47,11 +53,15 @@ Click it and it opens into a menu: chat, focus, clipboard, notifications. Play m
 <tr>
 <td width="50%" valign="top">
 
+<img src=".github/assets/features/styles.webp" alt="Island styles: capsule, twins, ripple, bolt, LED, drip and ghost" width="100%">
+
 **The eyes**<br>
 A pair of eyes inside the notch. They track your cursor, blink, glance around and sleep when you go idle. Pick the island's look: capsule, twins, ripple, bolt, LED, drip or ghost.
 
 </td>
 <td width="50%" valign="top">
+
+<img src=".github/assets/features/music.webp" alt="The island as a music player with synced lyrics beside it" width="100%">
 
 **Music and synced lyrics**<br>
 Whatever is playing through Windows media controls (Spotify, YouTube in the browser, and more): cover, controls, and synced lyrics in a box beside the player. Pull the lyrics out into their own window and pin it anywhere.
@@ -61,11 +71,15 @@ Whatever is playing through Windows media controls (Spotify, YouTube in the brow
 <tr>
 <td valign="top">
 
+<img src=".github/assets/features/stage.webp" alt="The Lyrics Stage: lyrics on a 3D drum over a blurred screen" width="100%">
+
 **Lyrics Stage**<br>
 One click and your screen melts into a soft blur with nothing but the lyrics, turning on a 3D drum. [More below.](#the-lyrics-stage)
 
 </td>
 <td valign="top">
+
+<img src=".github/assets/features/ask.webp" alt="Ask: a question and its answer in the island" width="100%">
 
 **Ask**<br>
 Press the hotkey and type. Answers come from any OpenAI-compatible endpoint you choose. Add your screen or paste an image, keep a history, hold a key to speak (transcribed on your own PC), and it can even draw in Paint.
@@ -75,11 +89,15 @@ Press the hotkey and type. Answers come from any OpenAI-compatible endpoint you 
 <tr>
 <td valign="top">
 
+<img src=".github/assets/features/notifications.webp" alt="A Windows notification arriving in the island" width="100%">
+
 **Notifications**<br>
 Windows notifications arrive in the island instead of the corner, with the app's own banners kept quiet. Click one and the app comes straight to the front.
 
 </td>
 <td valign="top">
+
+<img src=".github/assets/features/focus.webp" alt="The focus timer counting down in the island" width="100%">
 
 **Focus**<br>
 A pomodoro timer you can set to any length, gentle water reminders, and the island steps aside when an app goes full screen.
@@ -89,14 +107,18 @@ A pomodoro timer you can set to any length, gentle water reminders, and the isla
 <tr>
 <td valign="top">
 
+<img src=".github/assets/features/clipboard.webp" alt="Recent copies as a strip of cards" width="100%">
+
 **Clipboard**<br>
 The last things you copied, as a strip of cards. One click puts one back. Copies from password managers are never kept.
 
 </td>
 <td valign="top">
 
-**A little personality**<br>
-Now and then a greeting, a quote, or a line that fits what you're doing. Every open, close and click has a small synthesized sound, with its own volume.
+<img src=".github/assets/features/themes.webp" alt="The player in the three themes: black, dark red and red dope" width="100%">
+
+**Three themes and a little personality**<br>
+Black, dark red or red dope: the island, its panels and the lyrics change together. Now and then a greeting, a quote, or a line that fits what you're doing, and every open, close and click has a small synthesized sound.
 
 </td>
 </tr>
@@ -140,6 +162,18 @@ A focus mode for the song you love right now.
 | **No telemetry** | yenigma sends nothing about you anywhere. The only regular request is the update check. |
 
 <br>
+
+## Light on your PC
+
+| What yenigma is doing | CPU, average | GPU, average | Memory |
+|---|---|---|---|
+| Idle, watching | under 0.1% | 0% | 195 MB |
+| Playing music, player and lyrics open | 3.3% | 3.7% | 192 MB |
+| Lyrics Stage, full screen | 5.7% | 16.6% | 230 MB |
+
+The installer is about 4.4 MB.
+
+<sub>Measured on one PC (Intel Core i7-12650H, 16 threads, 16 GB RAM, Intel UHD and RTX 3070 Laptop graphics) with a release build, averaged over 45 to 60 seconds. CPU is the share of the whole processor and GPU the busiest GPU engine, as Task Manager shows them. Memory is the private working set. All figures cover yenigma and its WebView2 processes, not the music app or the Windows compositor. Your numbers will differ.</sub>
 
 ## Built with
 
